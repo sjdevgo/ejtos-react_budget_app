@@ -2,7 +2,7 @@ import React, { useContext, useState } from 'react';
 import { AppContext } from '../context/AppContext';
 
 const AllocationForm = (props) => {
-    const { dispatch,remaining  } = useContext(AppContext);
+    const { dispatch,remaining,currency  } = useContext(AppContext);
 
     const [name, setName] = useState('');
     const [cost, setCost] = useState('');
@@ -61,7 +61,7 @@ const AllocationForm = (props) => {
 
                   <div className="input-group-prepend" style={{ marginLeft: '3rem'}}>
                     
-                  <span >£</span>
+                  <span >{currency}</span>
                   </div>
                  
 
